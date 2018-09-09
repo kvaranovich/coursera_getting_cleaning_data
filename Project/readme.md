@@ -1,0 +1,58 @@
+Project Readme
+================
+
+Coursera *Getting and Cleaning Data* - Final Project
+====================================================
+
+Kiryl Varanovich
+
+This readme file explains the whole analysis that has been done. In order to fully recreate the whole process you only need to run: *run\_analysis.R* script. It creates the folders, as well as downloads necessary files and libraries.
+
+### Technical Details:
+
+-   R version: 3.4.4 (2018-03-15)
+-   R package versions:
+    -   dplyr 0.7.6
+    -   plyr 1.8.4
+    -   data.table 1.11.4
+    -   mgsub 1.5.0
+
+### Data Processing Flow:
+
+Before running the whole script you should set your working directory. If the working directory is not set, project folders are created in current working directory.
+
+The `run_analysis.R` script contains the following steps.
+
+1.  Creates folder where data is saved;
+2.  Downloads data;
+3.  Unzips it;
+4.  Checks if all required libraries are present. If not, libraries are downloaded;
+5.  Reads the data;
+6.  Processes the column names in following steps:
+    -   removes curly brackets;
+    -   replaces dashes and commas with underscores \_;
+    -   puts and underscore between lowercase and uppercase (preference of underscores in opposite to camelCase or period separator);
+    -   Makes all column names uppercase;
+    -   Replaces prefixes **T** and **F** with longer but much more readable prefixes **TIME\_** and **FREQ\_**;
+7.  Merges the training and the test sets to create one data set;
+8.  Processes duplicate column names;
+9.  Selects only the columns needed;
+10. Applies activity labels;
+11. Saves the final data set as `clean_data.txt`;
+12. Summarizes the data, calculating mean for all variables grouped by *id* and *activity*;
+13. Saves the summary as `summary_activity_data.txt` and `summary_id_data.txt`.
+
+### Initial Dataset Information
+
+For full information refer to: <http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones#>
+
+> The experiments have been carried out with a group of 30 volunteers within an age bracket of 19-48 years. Each person performed six activities (WALKING, WALKING\_UPSTAIRS, WALKING\_DOWNSTAIRS, SITTING, STANDING, LAYING) wearing a smartphone (Samsung Galaxy S II) on the waist. Using its embedded accelerometer and gyroscope, we captured 3-axial linear acceleration and 3-axial angular velocity at a constant rate of 50Hz. The experiments have been video-recorded to label the data manually. The obtained dataset has been randomly partitioned into two sets, where 70% of the volunteers was selected for generating the training data and 30% the test data.
+
+### Resources
+
+-   <https://www.coursera.org/learn/data-cleaning/peer/FIZtT/getting-and-cleaning-data-course-project>
+-   <http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones#>
+-   StackOverflow
+-   RStudio Cheatsheets
+
+> Davide Anguita, Alessandro Ghio, Luca Oneto, Xavier Parra and Jorge L. Reyes-Ortiz. A Public Domain Dataset for Human Activity Recognition Using Smartphones. 21th European Symposium on Artificial Neural Networks, Computational Intelligence and Machine Learning, ESANN 2013. Bruges, Belgium 24-26 April 2013.

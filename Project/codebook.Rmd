@@ -1,0 +1,143 @@
+---
+title: "Codebook"
+output: github_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Codebook - Getting and Cleaning Data
+
+Kiryl Varanovich
+
+### Description
+
+This is a codebook describing all the variables in the final dataset. The raw data comes from **UCI - Machine Learning Repository**. For more information about data processing steps and data sources, please refer to `readme.md` and `run_analysis.R` in this repository.
+
+### Source Data
+
+Please refer to: http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones#
+
+### Dataset Characteristics
+
+* Observations: 10299;
+* Variables: 88;
+* Size: 10506 KB;
+* Missing values: None;
+* Date of creation: 2018-09-09.
+
+### Variables
+
+* ACTIVITY
+    + STANDING
+    + WALKING
+    + WALKING_UPSTAIRS
+    + WALKING_DOWNSTAIRS
+    + SITTING
+    + LAYING
+* ID_SUBJECT - id of a volunteer
+    + [1-30]
+
+### How to read data:
+
+All other variables contain measurements which are represented as floating-point values, normalised and bounded within [-1,1].
+
+* ACC stands for accelerometer;
+* GYRO stands for gyroscope;
+* MEAN stands for average/mean values;
+* STD stands for standard deviation;
+* GRAVITY - gravitational component of acceleration signal;
+* BODY - mody motion component of acceleration signal;
+* MAG - magnitude;
+* JERK - jerk signals;
+* X, Y, Z - axises.
+
+### List of measurement variables
+
+* TIME_BODY_ACC_MEAN_X
+* TIME_BODY_ACC_MEAN_Y
+* TIME_BODY_ACC_MEAN_Z
+* TIME_BODY_ACC_STD_X
+* TIME_BODY_ACC_STD_Y
+* TIME_BODY_ACC_STD_Z
+* TIME_GRAVITY_ACC_MEAN_X
+* TIME_GRAVITY_ACC_MEAN_Y
+* TIME_GRAVITY_ACC_MEAN_Z
+* TIME_GRAVITY_ACC_STD_X
+* TIME_GRAVITY_ACC_STD_Y
+* TIME_GRAVITY_ACC_STD_Z
+* TIME_BODY_ACC_JERK_MEAN_X
+* TIME_BODY_ACC_JERK_MEAN_Y
+* TIME_BODY_ACC_JERK_MEAN_Z
+* TIME_BODY_ACC_JERK_STD_X
+* TIME_BODY_ACC_JERK_STD_Y
+* TIME_BODY_ACC_JERK_STD_Z
+* TIME_BODY_GYRO_MEAN_X
+* TIME_BODY_GYRO_MEAN_Y
+* TIME_BODY_GYRO_MEAN_Z
+* TIME_BODY_GYRO_STD_X
+* TIME_BODY_GYRO_STD_Y
+* TIME_BODY_GYRO_STD_Z
+* TIME_BODY_GYRO_JERK_MEAN_X
+* TIME_BODY_GYRO_JERK_MEAN_Y
+* TIME_BODY_GYRO_JERK_MEAN_Z
+* TIME_BODY_GYRO_JERK_STD_X
+* TIME_BODY_GYRO_JERK_STD_Y
+* TIME_BODY_GYRO_JERK_STD_Z
+* TIME_BODY_ACC_MAG_MEAN
+* TIME_BODY_ACC_MAG_STD
+* TIME_GRAVITY_ACC_MAG_MEAN
+* TIME_GRAVITY_ACC_MAG_STD
+* TIME_BODY_ACC_JERK_MAG_MEAN
+* TIME_BODY_ACC_JERK_MAG_STD
+* TIME_BODY_GYRO_MAG_MEAN
+* TIME_BODY_GYRO_MAG_STD
+* TIME_BODY_GYRO_JERK_MAG_MEAN
+* TIME_BODY_GYRO_JERK_MAG_STD
+* FREQ_BODY_ACC_MEAN_X
+* FREQ_BODY_ACC_MEAN_Y
+* FREQ_BODY_ACC_MEAN_Z
+* FREQ_BODY_ACC_STD_X
+* FREQ_BODY_ACC_STD_Y
+* FREQ_BODY_ACC_STD_Z
+* FREQ_BODY_ACC_MEAN_FREQ_X
+* FREQ_BODY_ACC_MEAN_FREQ_Y
+* FREQ_BODY_ACC_MEAN_FREQ_Z
+* FREQ_BODY_ACC_JERK_MEAN_X
+* FREQ_BODY_ACC_JERK_MEAN_Y
+* FREQ_BODY_ACC_JERK_MEAN_Z
+* FREQ_BODY_ACC_JERK_STD_X
+* FREQ_BODY_ACC_JERK_STD_Y
+* FREQ_BODY_ACC_JERK_STD_Z
+* FREQ_BODY_ACC_JERK_MEAN_FREQ_X
+* FREQ_BODY_ACC_JERK_MEAN_FREQ_Y
+* FREQ_BODY_ACC_JERK_MEAN_FREQ_Z
+* FREQ_BODY_GYRO_MEAN_X
+* FREQ_BODY_GYRO_MEAN_Y
+* FREQ_BODY_GYRO_MEAN_Z
+* FREQ_BODY_GYRO_STD_X
+* FREQ_BODY_GYRO_STD_Y
+* FREQ_BODY_GYRO_STD_Z
+* FREQ_BODY_GYRO_MEAN_FREQ_X
+* FREQ_BODY_GYRO_MEAN_FREQ_Y
+* FREQ_BODY_GYRO_MEAN_FREQ_Z
+* FREQ_BODY_ACC_MAG_MEAN
+* FREQ_BODY_ACC_MAG_STD
+* FREQ_BODY_ACC_MAG_MEAN_FREQ
+* FREQ_BODY_BODY_ACC_JERK_MAG_MEAN
+* FREQ_BODY_BODY_ACC_JERK_MAG_STD
+* FREQ_BODY_BODY_ACC_JERK_MAG_MEAN_FREQ
+* FREQ_BODY_BODY_GYRO_MAG_MEAN
+* FREQ_BODY_BODY_GYRO_MAG_STD
+* FREQ_BODY_BODY_GYRO_MAG_MEAN_FREQ
+* FREQ_BODY_BODY_GYRO_JERK_MAG_MEAN
+* FREQ_BODY_BODY_GYRO_JERK_MAG_STD
+* FREQ_BODY_BODY_GYRO_JERK_MAG_MEAN_FREQ
+* ANGLET_BODY_ACC_MEAN_GRAVITY
+* ANGLET_BODY_ACC_JERK_MEAN_GRAVITY_MEAN
+* ANGLET_BODY_GYRO_MEAN_GRAVITY_MEAN
+* ANGLET_BODY_GYRO_JERK_MEAN_GRAVITY_MEAN
+* ANGLE_X_GRAVITY_MEAN
+* ANGLE_Y_GRAVITY_MEAN
+* ANGLE_Z_GRAVITY_MEAN
